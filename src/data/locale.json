@@ -1,0 +1,25 @@
+[{
+    "name": "German",
+    "url": "de",
+    "icon": "germany.jpg",
+    "active": true
+},
+{
+    "name": "Italian",
+    "url": "it",
+    "icon": "italy.jpg",
+    "active": false
+},
+{
+    "name": "Spanish",
+    "url": "es",
+    "icon": "spain.jpg",
+    "active": false
+},
+{
+    "name": "Russian",
+    "url": "ru",
+    "icon": "russia.jpg",
+    "active": false
+}
+]

@@ -1,0 +1,94 @@
+.logo {
+    display: block;
+
+    .logo-lg {
+        display: block;
+    }
+
+    .logo-sm {
+        display: none;
+    }
+    
+    .logo-lg-text-dark {
+        color: #f3f7f9;
+        font-weight: 700;
+        font-size: 22px;
+        text-transform: uppercase
+    }
+    
+    .logo-lg-text-light {
+        color: #fff;
+        font-weight: 700;
+        font-size: 22px;
+        text-transform: uppercase
+    }
+
+    &-lg-text-dark {
+        color: #323a46;
+        font-weight: 700;
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+
+    &-lg-text-light {
+        color: #fff;
+        font-weight: 700;
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+
+    &-box {
+        height: 70px;
+        width: 240px;
+        float: left;
+        transition: all 0.1s ease-out;
+
+        .logo {
+            line-height: 70px;
+        }
+    }
+
+    &-light {
+        display: block;
+    }
+
+    &-dark {
+        display: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .logo-box {
+        width: 70px !important;
+        padding-right: 0 !important;
+    }
+
+    .logo-box .logo-lg {
+        display: none !important;
+    }
+
+    .logo-box .logo-sm {
+        display: block !important;
+    }
+}
+
+body[data-topbar-color=light] .logo-dark {
+    display: block
+}
+
+body[data-topbar-color=light] .logo-light {
+    display: none
+}
+
+@media (min-width:992px) and (max-width:1366px) {
+    body[data-layout-mode=horizontal] .logo-box {
+        padding-left: 20px
+    }
+}
+
+
+body[data-layout-mode=horizontal] .logo-box {
+    width: auto;
+    padding-right: 50px;
+    background-color: transparent
+}

@@ -1,0 +1,27 @@
+@import '../../styles/typography';
+
+.authentication-bg.enlarged {
+    min-height: 100px
+}
+
+.authentication-bg {
+    // background-color: #243971;
+    background-size: cover;
+    background-position: center
+}
+
+// .authentication-bg-pattern {
+//     background-image: url(../images/bg-pattern.png)
+// }
+
+.auth-logo .logo-light {
+    display: none
+}
+
+.auth-logo .logo-dark {
+    display: block
+}
+
+.error-text {
+    font-size: $font-sm-size;
+}

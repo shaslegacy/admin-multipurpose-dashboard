@@ -1,0 +1,206 @@
+[
+  {
+    "parent": "Navigation",
+    "menu": [
+      {
+        "name": "Dashboards",
+        "icon": "airplay",
+        "url": "/admin",
+        "toggle": false,
+        "badge": {},
+        "arrow": false,
+        "active": true,
+        "submenu": []
+      }
+    ]
+  },
+  {
+    "parent": "Apps",
+    "menu": [
+      {
+        "name": "Calendar",
+        "icon": "calendar",
+        "url": "apps-calendar.html",
+        "toggle": false,
+        "badge": {},
+        "arrow": false,
+        "active": true,
+        "submenu": []
+      },
+      {
+        "name": "Chat",
+        "icon": "message-square",
+        "url": "apps-chat.html",
+        "toggle": false,
+        "badge": {},
+        "arrow": false,
+        "active": true,
+        "submenu": []
+      },
+      {
+        "name": "Enquiries",
+        "icon": "message-circle",
+        "url": "/admin/enquiries",
+        "toggle": false,
+        "badge": {},
+        "arrow": false,
+        "active": true,
+        "submenu": []
+      },
+      {
+        "name": "E-commerce",
+        "icon": "shopping-cart",
+        "url": "sidebarEcommerce",
+        "toggle": true,
+        "badge": {},
+        "arrow": true,
+        "active": true,
+        "submenu": [
+          { "name": "Dashboard", "url": "/admin/mera-bazzar" },
+          { "name": "Products", "url": "mera-bazzar/products" },
+          { "name": "Brands", "url": "mera-bazzar/brands" },
+          { "name": "Categories", "url": "mera-bazzar/categories" },
+          { "name": "Colors", "url": "mera-bazzar/colors" },
+          { "name": "Customers", "url": "mera-bazzar/customers" },
+          { "name": "Orders", "url": "mera-bazzar/orders" },
+          { "name": "Sellers", "url": "ecommerce-sellers.html" },
+          { "name": "Coupons", "url": "mera-bazzar/coupons" },
+          { "name": "Checkout", "url": "ecommerce-checkout.html" }
+        ]
+      },
+      {
+        "name": "Blogs",
+        "icon": "twitch",
+        "url": "sidebarBlogs",
+        "toggle": true,
+        "badge": {},
+        "arrow": true,
+        "active": true,
+        "submenu": [
+          { "name": "Blog List", "url": "/admin/blogs" },
+          { "name": "Blog Categories", "url": "blog/blog-categories" }
+        ]
+      },
+      {
+        "name": "CRM",
+        "icon": "users",
+        "url": "sidebarCrm",
+        "toggle": true,
+        "badge": {},
+        "arrow": true,
+        "active": true,
+        "submenu": [
+          { "name": "Dashboard", "url": "crm-dashboard.html" },
+          { "name": "Contacts", "url": "crm-contacts.html" },
+          { "name": "Opportunities", "url": "crm-opportunities.html" },
+          { "name": "Leads", "url": "crm-leads.html" },
+          { "name": "Customers", "url": "crm-customers.html" }
+        ]
+      },
+      {
+        "name": "Email",
+        "icon": "mail",
+        "url": "sidebarEmail",
+        "toggle": true,
+        "badge": {},
+        "arrow": true,
+        "active": true,
+        "submenu": [
+          { "name": "Inbox", "url": "email-inbox.html" },
+          { "name": "Read Email", "url": "email-read.html" },
+          { "name": "Compose Email", "url": "email-compose.html" },
+          { "name": "Email Templates", "url": "email-templates.html" }
+        ]
+      },
+      {
+        "name": "Social Feed",
+        "icon": "rss",
+        "url": "apps-social-feed",
+        "toggle": false,
+        "badge": {
+          "type": "",
+          "value": "Hot",
+          "visible": true,
+          "class": "pink"
+        },
+        "arrow": false,
+        "active": true,
+        "submenu": []
+      },
+      {
+        "name": "Companies",
+        "icon": "activity",
+        "url": "apps-companies.html",
+        "toggle": false,
+        "badge": {},
+        "arrow": false,
+        "active": true,
+        "submenu": []
+      },
+      {
+        "name": "Projects",
+        "icon": "briefcase",
+        "url": "sidebarProjects",
+        "toggle": true,
+        "badge": {},
+        "arrow": true,
+        "active": true,
+        "submenu": [
+          { "name": "List", "url": "project-list.html" },
+          { "name": "Detail", "url": "project-detail.html" },
+          { "name": "Create Project", "url": "project-create.html" }
+        ]
+      },
+      {
+        "name": "Tasks",
+        "icon": "clipboard",
+        "url": "sidebarTasks",
+        "toggle": true,
+        "badge": {},
+        "arrow": true,
+        "active": true,
+        "submenu": [
+          { "name": "List", "url": "task-list.html" },
+          { "name": "Details", "url": "task-details.html" },
+          { "name": "Kanban Board", "url": "task-kanban-board.html" }
+        ]
+      },
+      {
+        "name": "Contacts",
+        "icon": "book",
+        "url": "sidebarContacts",
+        "toggle": true,
+        "badge": {},
+        "arrow": true,
+        "active": true,
+        "submenu": [
+          { "name": "Members List", "url": "contacts-list.html" },
+          { "name": "Profile", "url": "contacts-profile.html" }
+        ]
+      },
+      {
+        "name": "Tickets",
+        "icon": "aperture",
+        "url": "sidebarTickets",
+        "toggle": true,
+        "badge": {},
+        "arrow": true,
+        "active": true,
+        "submenu": [
+          { "name": "List", "url": "tickets-list.html" },
+          { "name": "Detail", "url": "tickets-detail.html" }
+        ]
+      },
+      {
+        "name": "File Manager",
+        "icon": "folder-plus",
+        "url": "apps-file-manager.html",
+        "toggle": false,
+        "badge": {},
+        "arrow": false,
+        "active": true,
+        "submenu": []
+      }
+    ]
+  }
+]
