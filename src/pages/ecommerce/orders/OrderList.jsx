@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Bredcrumb from 'src/components/core/Bredcrumb'
 import Pagination from 'src/components/ecommerce/products/pagination';
-import { getOrders } from 'src/features/auth/authSlice';
+import { getOrders } from '../../../features/order/orderSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import OrderTableHeader from 'src/components/ecommerce/orders/OrderTableHeader';
 import OrderTableBody from 'src/components/ecommerce/orders/OrderTableBody';

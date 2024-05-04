@@ -203,7 +203,7 @@ const AddProduct = () => {
                                 id="product-color"
                                 multiple = "multiple"
                                 onChange={(e) => handleColors(e)}
-                                value={color.map(c => c._id)}
+                                value={color?.map(c => c._id)}
                                 >
                                     <option>Select</option>
                                     {coloropt && coloropt.map((item, index) => (

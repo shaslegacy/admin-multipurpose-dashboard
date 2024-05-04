@@ -32,7 +32,7 @@ const Login = () => {
 
   const { user, isError, isSuccess, isLoading, message } = authState.auth;
   useEffect(() => {
-    if (isSuccess) {
+    if (user || isSuccess) {
       navigate("admin");
     } else {
       navigate("");
