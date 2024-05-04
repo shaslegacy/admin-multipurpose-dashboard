@@ -3,13 +3,13 @@ import Chart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 import { getSalesAnalyticsOptions } from '../../../../widgets/ChartOptions';
 
-const SalesAnalyticChart = () => {
+const SalesAnalyticChart = (chartData) => {
 
-    const salesAnalyticsRef = useRef<HTMLDivElement | null>(null);
+    const salesAnalyticsRef = useRef(null);
 
-    const [salesAnalyticsColors, setSalesAnalyticsColors] = useState<string[]>(["#1abc9c", "#4a81d4"]);
+    const [salesAnalyticsColors, setSalesAnalyticsColors] = useState(["#1abc9c", "#4a81d4"]);
 
-    const salesAnalyticsOptions: ApexOptions = getSalesAnalyticsOptions();
+    const salesAnalyticsOptions = getSalesAnalyticsOptions();
 
     useEffect(() => {
         const salesAnalyticsDataColors = salesAnalyticsRef.current?.dataset.colors;

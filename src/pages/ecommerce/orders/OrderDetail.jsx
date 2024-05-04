@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Bredcrumb from 'src/components/core/Bredcrumb'
-import { getOrderByUser, getOrders } from 'src/features/auth/authSlice'
+import { getOrderByUser, getOrders } from '../../../features/order/orderSlice'
 import { Link, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -14,7 +14,7 @@ const OrderDetail = () => {
         dispatch(getOrderByUser(userId));
     }, []);
 
-    const orderState = useSelector((state) => state.auth.orderbyuser);
+    const orderState = useSelector((state) =>state.auth.orderbyuser[0].products);
 
     console.log("first", orderState)
 

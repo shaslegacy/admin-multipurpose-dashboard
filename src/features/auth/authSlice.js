@@ -7,7 +7,6 @@ const getUserfromLocalStorage = localStorage.getItem("user")
 
   const initialState = {
     user: getUserfromLocalStorage,
-    orders: [],
     isError: false,
     isLoading: false,
     isSuccess: false,
@@ -25,27 +24,6 @@ export const login = createAsyncThunk(
   }
 );
 
-export const getOrders = createAsyncThunk(
-  "order/get-orders",
-  async (thunkAPI) => {
-    try {
-      return await authService.getOrders();
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error);
-    }
-  }
-);
-
-export const getOrderByUser = createAsyncThunk(
-  "order/get-order",
-  async (id, thunkAPI) => {
-    try {
-      return await authService.getOrder(id);
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error);
-    }
-  }
-);
 
 export const authSlice = createSlice({
   name: "auth",
@@ -69,38 +47,7 @@ export const authSlice = createSlice({
         state.message = action.error;
         state.isLoading = false;
       })
-      .addCase(getOrders.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(getOrders.fulfilled, (state, action) => {
-        state.isError = false;
-        state.isLoading = false;
-        state.isSuccess = true;
-        state.orders = action.payload;
-        state.message = "success";
-      })
-      .addCase(getOrders.rejected, (state, action) => {
-        state.isError = true;
-        state.isSuccess = false;
-        state.message = action.error;
-        state.isLoading = false;
-      })
-      .addCase(getOrderByUser.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(getOrderByUser.fulfilled, (state, action) => {
-        state.isError = false;
-        state.isLoading = false;
-        state.isSuccess = true;
-        state.orderbyuser = action.payload;
-        state.message = "success";
-      })
-      .addCase(getOrderByUser.rejected, (state, action) => {
-        state.isError = true;
-        state.isSuccess = false;
-        state.message = action.error;
-        state.isLoading = false;
-      });
+      
   },
 });
 
