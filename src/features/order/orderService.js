@@ -10,10 +10,8 @@ const getOrders = async () => {
 };
 
 const getOrder = async (id) => {
-  const response = await axios.post(
-    `${base_url}order/get-order-by-user/${id}`,
-    "",
-    config
+  const response = await axios.get(
+    `${base_url}order/get-order-by-id/${id}`, config
   );
 
   return response.data;

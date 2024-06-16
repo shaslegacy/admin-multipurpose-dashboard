@@ -12,10 +12,15 @@ const OrderTableBody = ({dataState}) => {
                      <label className="custom-control-label" for={`customCheck${i + 2}`}>&nbsp;</label>
                  </div>
              </td>
-             <td><a href="ecommerce-order-detail.html" className="text-body font-weight-bold">{data.paymentIntent.id}</a> </td>
+             <td><Link to={`../mera-bazzar/order/view-order/${data?._id}`} className="text-body font-weight-bold">{data.paymentIntent.id}</Link> </td>
              <td>
-                 <a href="ecommerce-product-detail.html"><img src="../../assets/images/products/product-1.png" alt="product-img" height="32" /></a>
-                 <a href="ecommerce-product-detail.html"><img src="../../assets/images/products/product-2.png" alt="product-img" height="32" /></a>
+                 {data.products?.length > 0 && data.products?.map((product, index) => (
+                     <>
+                        <Link to={`../mera-bazzar/order/view-order/${data?._id}`}>
+                            <img src={product.product.images[0]?.url} alt={product.product.title} title={product.product.title} height="32" />
+                        </Link>
+                     </>
+                 ))}
              </td>
              <td>
              {new Date(data.createdAt).toLocaleString('en-US', {
@@ -41,7 +46,7 @@ const OrderTableBody = ({dataState}) => {
                  <h5><span className="badge badge-info">{data.orderStatus}</span></h5>
              </td>
              <td>
-                 <Link to={`../mera-bazzar/order/view-order/${data.orderby._id}`} className="action-icon"> <i className="mdi mdi-eye"></i></Link>
+                 <Link to={`../mera-bazzar/order/view-order/${data?._id}`} className="action-icon"> <i className="mdi mdi-eye"></i></Link>
                  <Link to="javascript:void(0);" className="action-icon"> <i className="mdi mdi-square-edit-outline"></i></Link>
                  <Link to="javascript:void(0);" className="action-icon"> <i className="mdi mdi-delete"></i></Link>
              </td>

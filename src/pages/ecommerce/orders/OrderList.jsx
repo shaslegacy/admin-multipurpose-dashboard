@@ -14,8 +14,8 @@ const OrderList = () => {
         dispatch(getOrders());
     },[]);
 
-    const orderState = useSelector((state) => state.auth.orders);
-
+    const orderState = useSelector((state) => state.order.orders);
+    
   return (
     <div className="content">
         <div className="container-fluid">
